@@ -31,6 +31,6 @@ echo Press any key to exit.
 pause >nul
 exit
 :settings
-set "NVENC=ffmpeg -i ^"!file!^" -r 60 -c:v h264_nvenc -qp 12 -filter:v scale=iw*2:ih*2 -vsync 1 -colorspace 1 -y ^"converted_!format!^"/^"!name!^".avi"
-set "XVID=ffmpeg -i ^"!file!^" -r 60 -c:v mpeg4 -vtag xvid -qscale:v 1 -qscale:a 1 -g 1 -filter:v scale=iw*2:ih*2 -vsync 1 -y ^"converted_!format!^"/^"!name!^".avi"
-set "PRORES=ffmpeg -i ^"!file!^" -r 60 -c:v prores_ks -profile:v 0.5 -c:a pcm_s16le -filter:v scale=iw*2:ih*2 -vsync 1 -y ^"converted_!format!^"/^"!name!^".mov"
+set "NVENC=ffmpeg -i ^"!file!^" -r 42 -c:v h264_nvenc -qp 11 -filter:v scale=iw*2:ih*2 -c:a aac -b:a 1411k -vsync 1 -colorspace 1 -y ^"converted_!format!^"/^"!name!^".avi"
+set "XVID=ffmpeg -i ^"!file!^" -r 60 -c:v mpeg4 -vtag xvid -qscale:v 1 -qscale:a 1 -g 1 -filter:v scale=iw*2:ih*2 -c:a libmp3lame -qscale:a 0 -vsync 1 -y ^"converted_!format!^"/^"!name!^".avi"
+set "PRORES=ffmpeg -i ^"!file!^" -r 60 -c:v prores_ks -profile:v 0.5 -c:a pcm_s16le -filter:v scale=iw*2:ih*2 -c:a aac -b:a 1411k -vsync 1 -y ^"converted_!format!^"/^"!name!^".mov"
