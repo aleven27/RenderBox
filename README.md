@@ -17,6 +17,6 @@ The only requirement is FFMPEG. If you don't already have it, here's an easy tut
 _______
 |OTHER|
 
-Huge thanks to something#7597 for letting me use his Prorec template.
+I used Gmorz' prorec template to create this.
 
 Message me on Discord if you have any questions. - Aleven#8429
